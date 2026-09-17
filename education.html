@@ -1,88 +1,108 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติการศึกษา | พรชนก ศิลานิล</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติการศึกษา | พรชนก ศิลานิล</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fffaff,#f1e5ff);
+color:#554466;min-height:100vh
+}
+header{
+background:white;padding:20px 7%;
+display:flex;justify-content:space-between;align-items:center;
+box-shadow:0 3px 15px #d8c5e555;
+position:sticky;top:0;z-index:10
+}
+.logo{font-size:25px;font-weight:bold;color:#9165bd}
+nav a{text-decoration:none;color:#665572;padding:10px 15px;border-radius:25px;display:inline-block}
+nav a:hover,nav .active{background:#eadcff;color:#8053aa}
+.page{max-width:1000px;margin:auto;padding:65px 25px}
+.title{text-align:center;color:#9368bd;font-size:42px;margin-bottom:45px}
+.edu{
+background:white;border:2px solid #eadcf8;border-radius:28px;
+padding:35px;margin-bottom:25px;
+display:flex;align-items:center;gap:25px;
+box-shadow:0 10px 25px #9e78bd22;
+transition:.3s
+}
+.edu:hover{transform:translateX(8px)}
+.icon{
+width:70px;height:70px;border-radius:20px;
+background:#f0e2fb;display:flex;align-items:center;
+justify-content:center;font-size:35px;flex-shrink:0
+}
+.num{font-size:25px;color:#b08bcf;font-weight:bold}
+.edu h2{color:#75518e;margin:7px 0 10px}
+.edu p{color:#796b83;line-height:1.7}
+.level{color:#a074c7!important;font-size:14px}
+footer{text-align:center;padding:25px;color:#a28cad}
+.f{position:fixed;font-size:30px;opacity:.4;animation:float 4s infinite}
+.f1{left:5%;top:25%}.f2{right:7%;top:20%}
+.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:700px){
+header{flex-direction:column;gap:12px}
+nav{display:flex;flex-wrap:wrap;justify-content:center}
+.edu{align-items:flex-start}
+}
+</style>
 </head>
 
 <body>
 
-<div class="floating">🎓</div>
-<div class="floating">💜</div>
-<div class="floating">✨</div>
-<div class="floating">🌷</div>
+<div class="f f1">💜</div>
+<div class="f f2">🎓</div>
+<div class="f f3">✨</div>
+<div class="f f4">🌷</div>
 
 <header>
-    <div class="logo">MY PORTFOLIO ♡</div>
-
-    <nav>
-        <a href="index.html">หน้าปก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html" class="active">การศึกษา</a>
-        <a href="activities.html">กิจกรรม</a>
-    </nav>
+<div class="logo">MY PORTFOLIO ♡</div>
+<nav>
+<a href="index.html">หน้าปก</a>
+<a href="profile.html">ประวัติส่วนตัว</a>
+<a href="education.html" class="active">การศึกษา</a>
+<a href="activities.html">กิจกรรม</a>
+</nav>
 </header>
 
 <main class="page">
 
-    <div class="title">
-        <span>♡</span>
-        <h1>ประวัติการศึกษา</h1>
-        <span>♡</span>
-    </div>
+<h1 class="title">ประวัติการศึกษา 🎓</h1>
 
-    <section class="education">
+<div class="edu">
 
-        <div class="education-card">
+<div class="num">01</div>
+<div class="icon">📚</div>
 
-            <div class="number">01</div>
+<div>
+<p class="level">ระดับประถมศึกษา</p>
+<h2>โรงเรียนกุญแจคริสเตียนวิทยา</h2>
+<p>ศึกษาระดับประถมศึกษา</p>
+</div>
 
-            <div class="edu-icon">📚</div>
+</div>
 
-            <div>
-                <p class="level">ระดับประถมศึกษา</p>
+<div class="edu">
 
-                <h2>
-                    โรงเรียนกุญแจคริสเตียนวิทยา
-                </h2>
+<div class="num">02</div>
+<div class="icon">🎓</div>
 
-                <p class="edu-description">
-                    ศึกษาระดับประถมศึกษา
-                </p>
-            </div>
+<div>
+<p class="level">ระดับมัธยมศึกษา</p>
+<h2>โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</h2>
+<p>ปัจจุบันกำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6/8</p>
+</div>
 
-        </div>
-
-
-        <div class="education-card">
-
-            <div class="number">02</div>
-
-            <div class="edu-icon">🎓</div>
-
-            <div>
-                <p class="level">ระดับมัธยมศึกษา</p>
-
-                <h2>
-                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-                </h2>
-
-                <p class="edu-description">
-                    ปัจจุบันกำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6/8
-                </p>
-            </div>
-
-        </div>
-
-    </section>
+</div>
 
 </main>
 
-<footer>
-    Made with ♡ by Pornchanok
-</footer>
+<footer>♡ Made with love by Pornchanok ♡</footer>
 
 </body>
 </html>
