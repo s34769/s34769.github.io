@@ -1,88 +1,117 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว | พรชนก ศิลานิล</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว | พรชนก ศิลานิล</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fffaff,#f1e5ff);
+color:#554466;min-height:100vh
+}
+header{
+background:#fff;padding:20px 7%;
+display:flex;justify-content:space-between;align-items:center;
+box-shadow:0 3px 15px #d8c5e555;
+position:sticky;top:0;z-index:10
+}
+.logo{font-size:25px;font-weight:bold;color:#9165bd}
+nav a{text-decoration:none;color:#665572;padding:10px 15px;border-radius:25px;display:inline-block}
+nav a:hover,nav .active{background:#eadcff;color:#8053aa}
+.page{max-width:1000px;margin:auto;padding:65px 25px}
+.title{text-align:center;color:#9368bd;font-size:42px;margin-bottom:40px}
+.card{
+background:white;border:2px solid #eadcf8;border-radius:30px;
+padding:40px;display:flex;align-items:center;gap:45px;
+box-shadow:0 12px 30px #9e78bd22
+}
+.avatar{
+width:180px;height:180px;border-radius:50%;
+background:#f0e2fb;display:flex;align-items:center;
+justify-content:center;font-size:75px;flex-shrink:0
+}
+.info h2{color:#8d60b7;font-size:30px;margin-bottom:20px}
+.info p{margin:10px 0;color:#71627c;line-height:1.7}
+.info b{color:#8055a5}
+.about{
+margin-top:25px;background:white;padding:35px;
+border-radius:25px;border:2px solid #eadcf8;
+text-align:center;box-shadow:0 10px 25px #9e78bd22
+}
+.about h2{color:#9368bd;margin-bottom:15px}
+footer{text-align:center;padding:25px;color:#a28cad}
+.f{position:fixed;font-size:30px;opacity:.4;animation:float 4s infinite}
+.f1{left:5%;top:25%}.f2{right:7%;top:20%}
+.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:700px){
+header{flex-direction:column;gap:12px}
+nav{display:flex;flex-wrap:wrap;justify-content:center}
+.card{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 
 <body>
 
-<div class="floating">💜</div>
-<div class="floating">🌸</div>
-<div class="floating">✨</div>
-<div class="floating">🫧</div>
-<div class="floating">🦋</div>
+<div class="f f1">💜</div>
+<div class="f f2">🌸</div>
+<div class="f f3">✨</div>
+<div class="f f4">🦋</div>
 
 <header>
-    <div class="logo">MY PORTFOLIO ♡</div>
-
-    <nav>
-        <a href="index.html">หน้าปก</a>
-        <a href="profile.html" class="active">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="activities.html">กิจกรรม</a>
-    </nav>
+<div class="logo">MY PORTFOLIO ♡</div>
+<nav>
+<a href="index.html">หน้าปก</a>
+<a href="profile.html" class="active">ประวัติส่วนตัว</a>
+<a href="education.html">การศึกษา</a>
+<a href="activities.html">กิจกรรม</a>
+</nav>
 </header>
 
 <main class="page">
 
-    <div class="title">
-        <span>♡</span>
-        <h1>ประวัติส่วนตัว</h1>
-        <span>♡</span>
-    </div>
+<h1 class="title">ประวัติส่วนตัว ♡</h1>
 
-    <section class="profile-card">
+<div class="card">
 
-        <div class="avatar">
-            👩🏻‍🎓
-        </div>
+<div class="avatar">👩🏻‍🎓</div>
 
-        <div class="personal-info">
+<div class="info">
 
-            <h2>นางสาวพรชนก ศิลานิล</h2>
+<h2>นางสาวพรชนก ศิลานิล</h2>
 
-            <div class="info-item">
-                <span>🎂</span>
-                <p><b>อายุ</b><br>18 ปี</p>
-            </div>
+<p>💜 <b>ชื่อ</b> นางสาวพรชนก ศิลานิล</p>
 
-            <div class="info-item">
-                <span>🏫</span>
-                <p><b>ระดับชั้น</b><br>มัธยมศึกษาปีที่ 6/8</p>
-            </div>
+<p>🎂 <b>อายุ</b> 18 ปี</p>
 
-            <div class="info-item">
-                <span>💜</span>
-                <p><b>ความสนใจ</b><br>การเรียนรู้สิ่งใหม่ ๆ และการพัฒนาตนเอง</p>
-            </div>
+<p>🏫 <b>ระดับชั้น</b> มัธยมศึกษาปีที่ 6/8</p>
 
-        </div>
+<p>🌷 <b>งานอดิเรก</b> วาดรูป ฟังเพลง และใช้เวลาว่างกับสิ่งที่สนใจ</p>
 
-    </section>
+</div>
 
-    <section class="about-card">
+</div>
 
-        <div class="card-icon">🌷</div>
+<div class="about">
 
-        <h2>เกี่ยวกับฉัน</h2>
+<h2>เกี่ยวกับฉัน 🌸</h2>
 
-        <p>
-            ฉันเป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
-            ที่สนใจเรียนรู้และพัฒนาตัวเองอยู่เสมอ
-            ฉันเชื่อว่าทุกประสบการณ์ที่ได้พบเจอ
-            สามารถนำมาพัฒนาตัวเองและสร้างความทรงจำที่ดีได้
-        </p>
+<p>
+ฉันเป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
+ที่สนใจเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเอง
+พร้อมเก็บเกี่ยวประสบการณ์จากการเรียนและกิจกรรมต่าง ๆ
+เพื่อนำไปใช้ในอนาคต
+</p>
 
-    </section>
+</div>
 
 </main>
 
-<footer>
-    Made with ♡ by Pornchanok
-</footer>
+<footer>♡ Made with love by Pornchanok ♡</footer>
 
 </body>
 </html>
