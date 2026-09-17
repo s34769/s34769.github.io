@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | พรชนก ศิลานิล</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | พรชนก ศิลานิล</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fffaff,#f1e5ff);
+color:#554466;
+min-height:100vh;
+}
+header{
+background:#fff;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 15px #d8c5e555;
+position:sticky;top:0;z-index:10;
+}
+.logo{font-size:25px;font-weight:bold;color:#9165bd}
+nav a{
+text-decoration:none;color:#665572;
+padding:10px 15px;border-radius:25px;
+margin:3px;
+display:inline-block;
+}
+nav a:hover,nav .active{background:#eadcff;color:#8053aa}
+.cover{
+max-width:1100px;margin:auto;min-height:82vh;
+display:flex;align-items:center;justify-content:space-between;
+padding:60px 30px;gap:60px;
+}
+.text{max-width:600px}
+.welcome{color:#a276c8;letter-spacing:3px;margin-bottom:15px}
+h1{font-size:60px;color:#9368bd;margin-bottom:10px}
+h2{font-size:32px;margin-bottom:18px}
+p{line-height:1.9;color:#76697e}
+.button{
+display:inline-block;margin-top:25px;
+padding:13px 25px;background:#aa82d0;
+color:white;text-decoration:none;border-radius:30px;
+}
+.button:hover{background:#9061b8}
+.photo{
+width:300px;height:380px;background:white;
+border:5px solid #e5d2f7;border-radius:40px;
+display:flex;align-items:center;justify-content:center;
+font-size:80px;box-shadow:0 15px 40px #9e78bd33;
+}
+footer{text-align:center;padding:25px;color:#a28cad}
+.f1,.f2,.f3,.f4{
+position:fixed;font-size:30px;opacity:.45;
+animation:float 4s infinite ease-in-out;z-index:-1
+}
+.f1{left:5%;top:25%}.f2{right:7%;top:20%}
+.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:700px){
+header{flex-direction:column;gap:12px}
+.cover{flex-direction:column;text-align:center}
+h1{font-size:45px}
+.photo{width:250px;height:320px}
+}
+</style>
 </head>
 
 <body>
 
-<div class="floating">💜</div>
-<div class="floating">🌷</div>
-<div class="floating">✨</div>
-<div class="floating">🦋</div>
-<div class="floating">♡</div>
+<div class="f1">💜</div>
+<div class="f2">🌷</div>
+<div class="f3">✨</div>
+<div class="f4">🦋</div>
 
 <header>
-    <div class="logo">MY PORTFOLIO ♡</div>
-
-    <nav>
-        <a href="index.html" class="active">หน้าปก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="activities.html">กิจกรรม</a>
-    </nav>
+<div class="logo">MY PORTFOLIO ♡</div>
+<nav>
+<a href="index.html" class="active">หน้าปก</a>
+<a href="profile.html">ประวัติส่วนตัว</a>
+<a href="education.html">การศึกษา</a>
+<a href="activities.html">กิจกรรม</a>
+</nav>
 </header>
 
 <main class="cover">
 
-    <div class="cover-text">
+<div class="text">
+<div class="welcome">WELCOME TO MY PORTFOLIO ✦</div>
 
-        <p class="welcome">WELCOME TO MY PORTFOLIO ✦</p>
+<h1>สวัสดีค่ะ 👋🏻</h1>
 
-        <h1>สวัสดีค่ะ 👋🏻</h1>
+<h2>นางสาวพรชนก ศิลานิล</h2>
 
-        <h2>พรชนก ศิลานิล</h2>
+<p>
+ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน
+<br>
+เว็บไซต์รวบรวมประวัติส่วนตัว ประวัติการศึกษา
+และกิจกรรมต่าง ๆ
+</p>
 
-        <p class="description">
-            ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน
-            <br>
-            เว็บไซต์รวบรวมข้อมูลส่วนตัว ประวัติการศึกษา
-            และกิจกรรมที่ฉันได้เข้าร่วม
-        </p>
+<a href="profile.html" class="button">
+ทำความรู้จักฉัน →
+</a>
+</div>
 
-        <a href="profile.html" class="button">
-            ทำความรู้จักฉัน →
-        </a>
-
-    </div>
-
-    <div class="profile-photo">
-
-        <!-- เปลี่ยน photo.jpg เป็นชื่อไฟล์รูปของตัวเอง -->
-        <img src="photo.jpg" alt="รูปของพรชนก">
-
-        <div class="photo-decoration">🌸</div>
-
-    </div>
+<div class="photo">
+🧑🏻‍🎓
+</div>
 
 </main>
 
 <footer>
-    Made with ♡ by Pornchanok
+♡ Made with love by Pornchanok ♡
 </footer>
 
 </body>
