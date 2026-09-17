@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กิจกรรม | พรชนก ศิลานิล</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กิจกรรม | พรชนก ศิลานิล</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fffaff,#f1e5ff);
+color:#554466;min-height:100vh
+}
+header{
+background:white;padding:20px 7%;
+display:flex;justify-content:space-between;align-items:center;
+box-shadow:0 3px 15px #d8c5e555;
+position:sticky;top:0;z-index:10
+}
+.logo{font-size:25px;font-weight:bold;color:#9165bd}
+nav a{text-decoration:none;color:#665572;padding:10px 15px;border-radius:25px;display:inline-block}
+nav a:hover,nav .active{background:#eadcff;color:#8053aa}
+.page{max-width:1050px;margin:auto;padding:65px 25px}
+.title{text-align:center;color:#9368bd;font-size:42px;margin-bottom:45px}
+.grid{
+display:grid;grid-template-columns:1fr 1fr;gap:25px
+}
+.card{
+background:white;border:2px solid #eadcf8;
+border-radius:28px;padding:32px;min-height:230px;
+box-shadow:0 10px 25px #9e78bd22;
+transition:.3s
+}
+.card:hover{transform:translateY(-7px)}
+.icon{
+width:65px;height:65px;border-radius:20px;
+background:#f0e2fb;display:flex;align-items:center;
+justify-content:center;font-size:32px;margin-bottom:18px
+}
+.card h2{color:#8d60b7;margin-bottom:12px}
+.card p{color:#76697e;line-height:1.8;margin-bottom:15px}
+.tag{
+display:inline-block;background:#f1e5fa;
+color:#9a70bd;padding:6px 12px;
+border-radius:20px;font-size:13px
+}
+.number{float:right;color:#c2a2da;font-size:23px}
+footer{text-align:center;padding:25px;color:#a28cad}
+.f{position:fixed;font-size:30px;opacity:.4;animation:float 4s infinite}
+.f1{left:5%;top:25%}.f2{right:7%;top:20%}
+.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:700px){
+header{flex-direction:column;gap:12px}
+nav{display:flex;flex-wrap:wrap;justify-content:center}
+.grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
-<div class="floating">✨</div>
-<div class="floating">💜</div>
-<div class="floating">🌸</div>
-<div class="floating">🦋</div>
-<div class="floating">♡</div>
+<div class="f f1">💜</div>
+<div class="f f2">✨</div>
+<div class="f f3">🌸</div>
+<div class="f f4">🦋</div>
 
 <header>
-    <div class="logo">MY PORTFOLIO ♡</div>
-
-    <nav>
-        <a href="index.html">หน้าปก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="activities.html" class="active">กิจกรรม</a>
-    </nav>
+<div class="logo">MY PORTFOLIO ♡</div>
+<nav>
+<a href="index.html">หน้าปก</a>
+<a href="profile.html">ประวัติส่วนตัว</a>
+<a href="education.html">การศึกษา</a>
+<a href="activities.html" class="active">กิจกรรม</a>
+</nav>
 </header>
 
 <main class="page">
 
-    <div class="title">
-        <span>♡</span>
-        <h1>กิจกรรมที่ทำ</h1>
-        <span>♡</span>
-    </div>
+<h1 class="title">กิจกรรมที่ทำ ✨</h1>
 
-    <section class="activity-grid">
+<div class="grid">
 
-        <div class="activity-card">
-            <div class="activity-number">01</div>
-            <div class="activity-icon">🎨</div>
+<div class="card">
+<div class="number">01</div>
+<div class="icon">🎨</div>
+<h2>กิจกรรมที่ 1</h2>
+<p>ใส่รายละเอียดกิจกรรมที่เคยเข้าร่วม และสิ่งที่ได้รับจากกิจกรรม</p>
+<span class="tag">ACTIVITY ✦</span>
+</div>
 
-            <h2>กิจกรรมที่ 1</h2>
+<div class="card">
+<div class="number">02</div>
+<div class="icon">📚</div>
+<h2>กิจกรรมที่ 2</h2>
+<p>ใส่รายละเอียดกิจกรรมที่เคยเข้าร่วม และประสบการณ์ที่ได้รับ</p>
+<span class="tag">ACTIVITY ✦</span>
+</div>
 
-            <p>
-                สามารถใส่ชื่อกิจกรรม
-                และรายละเอียดกิจกรรมที่เคยเข้าร่วมได้ที่นี่
-            </p>
+<div class="card">
+<div class="number">03</div>
+<div class="icon">🏆</div>
+<h2>กิจกรรมที่ 3</h2>
+<p>ใส่รายละเอียดกิจกรรม ผลงาน หรือการแข่งขันที่เคยเข้าร่วม</p>
+<span class="tag">ACTIVITY ✦</span>
+</div>
 
-            <span>✦ ACTIVITY</span>
-        </div>
+<div class="card">
+<div class="number">04</div>
+<div class="icon">🌷</div>
+<h2>กิจกรรมที่ 4</h2>
+<p>ใส่รายละเอียดกิจกรรมและสิ่งที่ได้เรียนรู้จากประสบการณ์</p>
+<span class="tag">ACTIVITY ✦</span>
+</div>
 
-
-        <div class="activity-card">
-            <div class="activity-number">02</div>
-            <div class="activity-icon">📚</div>
-
-            <h2>กิจกรรมที่ 2</h2>
-
-            <p>
-                สามารถใส่ชื่อกิจกรรม
-                และรายละเอียดกิจกรรมที่เคยเข้าร่วมได้ที่นี่
-            </p>
-
-            <span>✦ ACTIVITY</span>
-        </div>
-
-
-        <div class="activity-card">
-            <div class="activity-number">03</div>
-            <div class="activity-icon">🏆</div>
-
-            <h2>กิจกรรมที่ 3</h2>
-
-            <p>
-                สามารถใส่ชื่อกิจกรรม
-                และรายละเอียดกิจกรรมที่เคยเข้าร่วมได้ที่นี่
-            </p>
-
-            <span>✦ ACTIVITY</span>
-        </div>
-
-
-        <div class="activity-card">
-            <div class="activity-number">04</div>
-            <div class="activity-icon">🌷</div>
-
-            <h2>กิจกรรมที่ 4</h2>
-
-            <p>
-                สามารถใส่ชื่อกิจกรรม
-                และรายละเอียดกิจกรรมที่เคยเข้าร่วมได้ที่นี่
-            </p>
-
-            <span>✦ ACTIVITY</span>
-        </div>
-
-    </section>
+</div>
 
 </main>
 
-<footer>
-    Made with ♡ by Pornchanok
-</footer>
+<footer>♡ Made with love by Pornchanok ♡</footer>
 
 </body>
 </html>
