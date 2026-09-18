@@ -3,58 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | พรชนก ศิลานิล</title>
+
+<title>Pan Portfolio | Phornchanok Silanil</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#fffaff,#f1e5ff);
-color:#554466;
-min-height:100vh;
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#fffaff,#f1e5ff,#eadcff);
+    color:#554466;
+    overflow:hidden;
 }
-header{
-background:#fff;
-padding:20px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 3px 15px #d8c5e555;
-position:sticky;top:0;z-index:10;
+
+
+/* พื้นหลังตกแต่ง */
+
+.bg-circle{
+    position:fixed;
+    border-radius:50%;
+    pointer-events:none;
+    opacity:.5;
 }
-.logo{font-size:25px;font-weight:bold;color:#9165bd}
-nav a{
-text-decoration:none;color:#665572;
-padding:10px 15px;border-radius:25px;
-margin:3px;
-display:inline-block;
+
+.circle1{
+    width:280px;
+    height:280px;
+    background:#eadcff;
+    top:-100px;
+    left:-80px;
 }
-nav a:hover,nav .active{background:#eadcff;color:#8053aa}
+
+.circle2{
+    width:350px;
+    height:350px;
+    background:#f7eefe;
+    bottom:-150px;
+    right:-100px;
+}
+
+
+/* ของตกแต่งลอย */
+
+.float{
+    position:fixed;
+    pointer-events:none;
+    z-index:1;
+    animation:float 4s ease-in-out infinite;
+}
+
+.f1{
+    top:15%;
+    left:10%;
+    font-size:30px;
+    color:#b58bd5;
+}
+
+.f2{
+    top:25%;
+    right:12%;
+    font-size:25px;
+    animation-delay:1s;
+}
+
+.f3{
+    bottom:20%;
+    left:15%;
+    font-size:22px;
+    animation-delay:2s;
+}
+
+.f4{
+    bottom:15%;
+    right:13%;
+    font-size:30px;
+    color:#b58bd5;
+    animation-delay:1.5s;
+}
+
+
+/* หน้า */
+
 .cover{
-max-width:1100px;margin:auto;min-height:82vh;
-display:flex;align-items:center;justify-content:space-between;
-padding:60px 30px;gap:60px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
 }
-.text{max-width:600px}
-.welcome{color:#a276c8;letter-spacing:3px;margin-bottom:15px}
-h1{font-size:60px;color:#9368bd;margin-bottom:10px}
-h2{font-size:32px;margin-bottom:18px}
-p{line-height:1.9;color:#76697e}
-.button{
-display:inline-block;margin-top:25px;
-padding:13px 25px;background:#aa82d0;
-color:white;text-decoration:none;border-radius:30px;
+
+
+/* ข้อความด้านบน */
+
+.welcome{
+    color:#9b78ba;
+    font-size:15px;
+    letter-spacing:3px;
+    margin-bottom:18px;
+    animation:fadeDown 1s ease;
 }
-.button:hover{background:#9061b8}
+
+
+/* รูป */
+
 .photo{
     width:300px;
     height:380px;
     background:white;
-    border:5px solid #e5d2f7;
+    border:6px solid #eadcff;
     border-radius:40px;
     padding:10px;
-    box-shadow:0 15px 40px #9e78bd33;
+    box-shadow:0 20px 50px #9e78bd35;
     overflow:hidden;
+    animation:photoIn 1s ease;
+    transition:.4s;
+}
+
+.photo:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 25px 60px #9e78bd45;
 }
 
 .photo img{
@@ -64,70 +145,211 @@ color:white;text-decoration:none;border-radius:30px;
     border-radius:30px;
     display:block;
 }
-footer{text-align:center;padding:25px;color:#a28cad}
-.f1,.f2,.f3,.f4{
-position:fixed;font-size:30px;opacity:.45;
-animation:float 4s infinite ease-in-out;z-index:-1
+
+
+/* ชื่อเว็บ */
+
+.title{
+    margin-top:25px;
+    font-size:48px;
+    color:#8053aa;
+    font-weight:bold;
+    animation:fadeUp 1s ease .2s both;
 }
-.f1{left:5%;top:25%}.f2{right:7%;top:20%}
-.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
-@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
-@media(max-width:700px){
-header{flex-direction:column;gap:12px}
-.cover{flex-direction:column;text-align:center}
-h1{font-size:45px}
-.photo{width:250px;height:320px}
+
+.name{
+    margin-top:8px;
+    font-size:18px;
+    color:#77667f;
+    letter-spacing:1px;
+    animation:fadeUp 1s ease .4s both;
 }
+
+.student{
+    margin-top:8px;
+    color:#a08eaa;
+    font-size:14px;
+    animation:fadeUp 1s ease .5s both;
+}
+
+
+/* คำโปรย */
+
+.quote{
+    margin-top:15px;
+    color:#916db0;
+    font-size:15px;
+    animation:fadeUp 1s ease .6s both;
+}
+
+
+/* ปุ่ม */
+
+.enter{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 30px;
+    background:#a77acb;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 8px 20px #9e78bd35;
+    transition:.3s;
+    animation:fadeUp 1s ease .8s both;
+}
+
+.enter:hover{
+    background:#875db2;
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px #9e78bd45;
+}
+
+
+/* animation */
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(8deg);
+    }
+}
+
+@keyframes photoIn{
+    from{
+        opacity:0;
+        transform:scale(.85) translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* มือถือ */
+
+@media(max-width:600px){
+
+    .photo{
+        width:240px;
+        height:310px;
+    }
+
+    .title{
+        font-size:36px;
+    }
+
+    .welcome{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .name{
+        font-size:16px;
+    }
+
+    .f1,
+    .f2,
+    .f3,
+    .f4{
+        font-size:20px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<div class="f1">💜</div>
-<div class="f2">🌷</div>
-<div class="f3">✨</div>
-<div class="f4">🦋</div>
 
-<header>
-<div class="logo">MY PORTFOLIO ♡</div>
-<nav>
-<a href="index.html" class="active">หน้าปก</a>
-<a href="profile.html">ประวัติส่วนตัว</a>
-<a href="education.html">การศึกษา</a>
-<a href="activities.html">กิจกรรม</a>
-</nav>
-</header>
+<!-- พื้นหลัง -->
+
+<div class="bg-circle circle1"></div>
+<div class="bg-circle circle2"></div>
+
+
+<!-- ของตกแต่ง -->
+
+<div class="float f1">✦</div>
+<div class="float f2">♡</div>
+<div class="float f3">🦋</div>
+<div class="float f4">✧</div>
+
+
+<!-- หน้าปก -->
 
 <main class="cover">
 
-<div class="text">
-<div class="welcome">WELCOME TO MY PORTFOLIO ✦</div>
+    <div class="welcome">
+        WELCOME TO MY PORTFOLIO
+    </div>
 
-<h1>สวัสดีค่ะ 👋🏻</h1>
 
-<h2>นางสาวพรชนก ศิลานิล</h2>
+    <div class="photo">
 
-<p>
-ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน
-<br>
-เว็บไซต์รวบรวมประวัติส่วนตัว ประวัติการศึกษา
-และกิจกรรมต่าง ๆ
-</p>
+        <img src="IMG_0965.jpeg"
+             alt="Phornchanok Silanil">
 
-<a href="profile.html" class="button">
-ทำความรู้จักฉัน →
-</a>
-</div>
+    </div>
 
-<div class="photo">
-    <img src="IMG_2251.jpeg" alt="รูปโปรไฟล์ของพรชนก">
-</div>
+
+    <h1 class="title">
+        Pan Portfolio
+    </h1>
+
+
+    <p class="name">
+        Phornchanok Silanil
+    </p>
+
+
+    <p class="student">
+        M.6/8 • Chinese Program
+    </p>
+
+
+    <p class="quote">
+        “My little journey ♡”
+    </p>
+
+
+    <a href="profile.html" class="enter">
+        ENTER PORTFOLIO →
+    </a>
 
 </main>
 
-<footer>
-♡ Made with love by Pornchanok ♡
-</footer>
 
 </body>
 </html>
