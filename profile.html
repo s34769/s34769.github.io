@@ -3,125 +3,788 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ประวัติส่วนตัว | พรชนก ศิลานิล</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#fffaff,#f1e5ff);
-color:#554466;min-height:100vh
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fffaff,#f0e3ff,#fffaff);
+    color:#554466;
+    min-height:100vh;
 }
+
+
+/* HEADER */
+
 header{
-background:#fff;padding:20px 7%;
-display:flex;justify-content:space-between;align-items:center;
-box-shadow:0 3px 15px #d8c5e555;
-position:sticky;top:0;z-index:10
+    background:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px #d8c5e5;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
-.logo{font-size:25px;font-weight:bold;color:#9165bd}
-nav a{text-decoration:none;color:#665572;padding:10px 15px;border-radius:25px;display:inline-block}
-nav a:hover,nav .active{background:#eadcff;color:#8053aa}
-.page{max-width:1000px;margin:auto;padding:65px 25px}
-.title{text-align:center;color:#9368bd;font-size:42px;margin-bottom:40px}
-.card{
-background:white;border:2px solid #eadcf8;border-radius:30px;
-padding:40px;display:flex;align-items:center;gap:45px;
-box-shadow:0 12px 30px #9e78bd22
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#9165bd;
 }
+
+nav a{
+    text-decoration:none;
+    color:#665572;
+    padding:10px 15px;
+    border-radius:25px;
+    display:inline-block;
+    transition:.3s;
+}
+
+nav a:hover,
+nav .active{
+    background:#eadcff;
+    color:#8053aa;
+    transform:translateY(-2px);
+}
+
+
+/* MAIN */
+
+.page{
+    max-width:1050px;
+    margin:auto;
+    padding:60px 25px 80px;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#875db2;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#9b8ba7;
+    margin-bottom:45px;
+}
+
+
+/* PROFILE INTRO */
+
+.intro{
+    background:white;
+    border-radius:35px;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    gap:35px;
+    box-shadow:0 15px 40px #9e78bd22;
+    border:2px solid #eadbfa;
+    margin-bottom:45px;
+    animation:up .8s ease;
+}
+
 .avatar{
-    width:180px;
-    height:180px;
+    width:190px;
+    height:190px;
     border-radius:50%;
-    background:#f0e2fb;
+    overflow:hidden;
+    flex-shrink:0;
+    border:7px solid #eadcff;
+    box-shadow:0 8px 25px #9e78bd33;
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.intro-text h2{
+    color:#875db2;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.intro-text p{
+    line-height:1.9;
+    font-size:17px;
+}
+
+.info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.info span{
+    background:#f2e7fc;
+    color:#8053aa;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+
+/* SECTION */
+
+.section-title{
+    text-align:center;
+    color:#875db2;
+    font-size:28px;
+    margin:55px 0 25px;
+}
+
+
+/* HOBBY CARDS */
+
+.hobby-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.hobby{
+    background:white;
+    border:2px solid #eadbfa;
+    border-radius:28px;
+    padding:28px 20px;
+    text-align:center;
+    box-shadow:0 10px 30px #9e78bd18;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.hobby:hover{
+    transform:translateY(-10px) rotate(-1deg);
+    box-shadow:0 18px 35px #9e78bd30;
+}
+
+.hobby-icon{
+    width:100px;
+    height:100px;
+    margin:0 auto 18px;
+    border-radius:30px;
+    background:#f3e8ff;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:75px;
+    font-size:52px;
+    transition:.35s;
+}
+
+.hobby:hover .hobby-icon{
+    transform:scale(1.12) rotate(5deg);
+}
+
+.hobby h3{
+    color:#875db2;
+    margin-bottom:8px;
+    font-size:21px;
+}
+
+.hobby p{
+    color:#817487;
+    line-height:1.7;
+}
+
+
+/* INTEREST */
+
+.interest{
+    background:linear-gradient(135deg,#ffffff,#f5ebff);
+    border:2px solid #eadbfa;
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 30px #9e78bd20;
+    position:relative;
+    overflow:hidden;
+}
+
+.interest::before{
+    content:"✦";
+    position:absolute;
+    top:15px;
+    left:25px;
+    font-size:30px;
+    color:#c99bea;
+    animation:float 3s infinite ease-in-out;
+}
+
+.interest::after{
+    content:"♡";
+    position:absolute;
+    bottom:10px;
+    right:30px;
+    font-size:35px;
+    color:#d6b5f0;
+    animation:float 3s infinite ease-in-out;
+}
+
+.interest h3{
+    color:#875db2;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.interest p{
+    max-width:750px;
+    margin:auto;
+    line-height:2;
+    font-size:17px;
+}
+
+
+/* GOAL */
+
+.goal{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:white;
+    border-radius:30px;
+    padding:28px;
+    border:2px solid #eadbfa;
+    box-shadow:0 10px 30px #9e78bd18;
+}
+
+.goal-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#eadcff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
     flex-shrink:0;
 }
-.info h2{color:#8d60b7;font-size:30px;margin-bottom:20px}
-.info p{margin:10px 0;color:#71627c;line-height:1.7}
-.info b{color:#8055a5}
-.about{
-margin-top:25px;background:white;padding:35px;
-border-radius:25px;border:2px solid #eadcf8;
-text-align:center;box-shadow:0 10px 25px #9e78bd22
+
+.goal h3{
+    color:#875db2;
+    margin-bottom:8px;
+    font-size:23px;
 }
-.about h2{color:#9368bd;margin-bottom:15px}
-footer{text-align:center;padding:25px;color:#a28cad}
-.f{position:fixed;font-size:30px;opacity:.4;animation:float 4s infinite}
-.f1{left:5%;top:25%}.f2{right:7%;top:20%}
-.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
-@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+
+.goal p{
+    line-height:1.8;
+}
+
+
+/* UNIVERSITY */
+
+.university{
+    background:linear-gradient(135deg,#ffffff,#f2e5ff);
+    border:3px solid #dfc8f5;
+    border-radius:35px;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    box-shadow:0 15px 40px #9e78bd25;
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.university:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px #9e78bd35;
+}
+
+.uni-icon{
+    width:120px;
+    height:120px;
+    background:#eadcff;
+    border-radius:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    flex-shrink:0;
+}
+
+.university h3{
+    color:#875db2;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.faculty{
+    display:inline-block;
+    background:#d9baf2;
+    color:#71469a;
+    padding:8px 18px;
+    border-radius:20px;
+    margin:8px 0 12px;
+    font-weight:bold;
+}
+
+.university p{
+    line-height:1.8;
+}
+
+
+/* EDUCATION TIMELINE */
+
+.timeline{
+    position:relative;
+    max-width:800px;
+    margin:40px auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:25px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#dfc8f5;
+    border-radius:10px;
+}
+
+.edu{
+    position:relative;
+    padding-left:75px;
+    margin-bottom:35px;
+}
+
+.edu-dot{
+    position:absolute;
+    left:0;
+    top:5px;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#eadcff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    border:5px solid white;
+    box-shadow:0 5px 15px #9e78bd30;
+}
+
+.edu-card{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    border:2px solid #eadbfa;
+    box-shadow:0 8px 25px #9e78bd15;
+    transition:.3s;
+}
+
+.edu-card:hover{
+    transform:translateX(8px);
+}
+
+.edu-card h3{
+    color:#875db2;
+    margin-bottom:8px;
+}
+
+.edu-card p{
+    line-height:1.8;
+    color:#74677b;
+}
+
+
+/* FLOATING */
+
+.float{
+    position:fixed;
+    pointer-events:none;
+    opacity:.6;
+    animation:float 4s infinite ease-in-out;
+}
+
+.f1{
+    top:25%;
+    left:4%;
+    font-size:30px;
+}
+
+.f2{
+    top:55%;
+    right:4%;
+    font-size:28px;
+    animation-delay:1s;
+}
+
+.f3{
+    bottom:15%;
+    left:8%;
+    font-size:25px;
+    animation-delay:2s;
+}
+
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#9b8ba7;
+}
+
+
+/* ANIMATION */
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes up{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* MOBILE */
+
 @media(max-width:700px){
-header{flex-direction:column;gap:12px}
-nav{display:flex;flex-wrap:wrap;justify-content:center}
-.card{flex-direction:column;text-align:center}
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        padding:8px 7px;
+        font-size:13px;
+    }
+
+    .intro{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .info{
+        justify-content:center;
+    }
+
+    .hobby-grid{
+        grid-template-columns:1fr;
+    }
+
+    .university{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .goal{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<div class="f f1">💜</div>
-<div class="f f2">🌸</div>
-<div class="f f3">✨</div>
-<div class="f f4">🦋</div>
+<!-- ของตกแต่ง -->
+
+<div class="float f1">♡</div>
+<div class="float f2">🦋</div>
+<div class="float f3">✦</div>
+
 
 <header>
-<div class="logo">MY PORTFOLIO ♡</div>
-<nav>
-<a href="index.html">หน้าปก</a>
-<a href="profile.html" class="active">ประวัติส่วนตัว</a>
-<a href="education.html">การศึกษา</a>
-<a href="activities.html">กิจกรรม</a>
-</nav>
+
+    <div class="logo">
+        MY PORTFOLIO ♡
+    </div>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="profile.html" class="active">ประวัติส่วนตัว</a>
+        <a href="activities.html">กิจกรรม</a>
+        <a href="contact.html">ติดต่อ</a>
+    </nav>
+
 </header>
+
 
 <main class="page">
 
-<h1 class="title">ประวัติส่วนตัว ♡</h1>
+    <h1 class="title">
+        About Me ♡
+    </h1>
 
-<div class="card">
+    <p class="subtitle">
+        มาทำความรู้จักกับฉันกันนะ ✨
+    </p>
 
-<div class="avatar">
-    <img src="IMG_2251.jpeg"
-         alt="รูปโปรไฟล์ของพรชนก"
-         style="width:180px;height:180px;object-fit:cover;border-radius:50%;display:block;">
-</div>
 
-<div class="info">
+    <!-- แนะนำตัว -->
 
-<h2>นางสาวพรชนก ศิลานิล</h2>
+    <section class="intro">
 
-<p>💜 <b>ชื่อ</b> นางสาวพรชนก ศิลานิล</p>
+        <div class="avatar">
+            <img src="IMG_2251.jpeg"
+                 alt="รูปโปรไฟล์ของพรชนก">
+        </div>
 
-<p>🎂 <b>อายุ</b> 18 ปี</p>
+        <div class="intro-text">
 
-<p>🏫 <b>ระดับชั้น</b> มัธยมศึกษาปีที่ 6/8</p>
+            <h2>นางสาวพรชนก ศิลานิล 🌷</h2>
 
-<p>🌷 <b>งานอดิเรก</b> วาดรูป ฟังเพลง และใช้เวลาว่างกับสิ่งที่สนใจ</p>
+            <p>
+                ปัจจุบันกำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6 ห้อง 8
+                สายการเรียนเตรียมมนุษยศาสตร์ ภาษาจีน
+            </p>
 
-</div>
+            <div class="info">
+                <span>🎓 ม.6/8</span>
+                <span>🇨🇳 ภาษาจีน</span>
+                <span>🏫 โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</span>
+            </div>
 
-</div>
+        </div>
 
-<div class="about">
+    </section>
 
-<h2>เกี่ยวกับฉัน 🌸</h2>
 
-<p>
-ฉันเป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
-ที่สนใจเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเอง
-พร้อมเก็บเกี่ยวประสบการณ์จากการเรียนและกิจกรรมต่าง ๆ
-เพื่อนำไปใช้ในอนาคต
-</p>
+    <!-- งานอดิเรก -->
 
-</div>
+    <h2 class="section-title">
+        สิ่งที่ฉันชอบทำ 🎀
+    </h2>
+
+    <div class="hobby-grid">
+
+        <div class="hobby">
+            <div class="hobby-icon">🎮</div>
+            <h3>เล่นเกม</h3>
+            <p>
+                ใช้เวลาว่างเล่นเกมเพื่อความสนุก
+                และผ่อนคลายจากการเรียน
+            </p>
+        </div>
+
+
+        <div class="hobby">
+            <div class="hobby-icon">🎨</div>
+            <h3>วาดรูป</h3>
+            <p>
+                ชอบวาดรูปในเวลาว่าง
+                เป็นอีกหนึ่งกิจกรรมที่ช่วยให้รู้สึกผ่อนคลาย
+            </p>
+        </div>
+
+
+        <div class="hobby">
+            <div class="hobby-icon">🎧</div>
+            <h3>ฟังเพลง</h3>
+            <p>
+                ชอบฟังเพลงในเวลาว่าง
+                เพื่อพักผ่อนและสร้างบรรยากาศให้กับตัวเอง
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- สิ่งที่สนใจ -->
+
+    <h2 class="section-title">
+        สิ่งที่ฉันสนใจในตอนนี้ ✨
+    </h2>
+
+    <section class="interest">
+
+        <h3>
+            พัฒนาตัวเองในทุก ๆ วัน 🌱
+        </h3>
+
+        <p>
+            สิ่งที่ฉันสนใจในตอนนี้คือการตั้งใจเข้ามหาวิทยาลัยที่หวัง
+            และพัฒนาตัวเองให้ดีขึ้นในทุก ๆ วัน
+            ทั้งด้านการเรียน ความสามารถ และประสบการณ์ใหม่ ๆ
+        </p>
+
+    </section>
+
+
+    <!-- เป้าหมาย -->
+
+    <h2 class="section-title">
+        เป้าหมายในอนาคต 🎯
+    </h2>
+
+    <section class="goal">
+
+        <div class="goal-icon">
+            🎓
+        </div>
+
+        <div>
+            <h3>ก้าวไปสู่มหาวิทยาลัยที่อยากเข้า</h3>
+
+            <p>
+                เป้าหมายในอนาคตคือการได้เข้าศึกษาในมหาวิทยาลัยที่ใฝ่ฝัน
+                และพัฒนาตัวเองให้สามารถเติบโตไปในเส้นทางที่ต้องการ
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- มหาวิทยาลัย -->
+
+    <h2 class="section-title">
+        มหาวิทยาลัยที่อยากเข้า 🏫
+    </h2>
+
+    <section class="university">
+
+        <div class="uni-icon">
+            🌿
+        </div>
+
+        <div>
+
+            <h3>
+                มหาวิทยาลัยพะเยา
+            </h3>
+
+            <span class="faculty">
+                คณะรัฐศาสตร์
+            </span>
+
+            <p>
+                เป็นมหาวิทยาลัยที่ฉันอยากเข้าศึกษาต่อ
+                เพราะเป็นมหาวิทยาลัยที่อยู่ท่ามกลางธรรมชาติ
+                และโดยส่วนตัวฉันเป็นคนที่ชื่นชอบภาคเหนืออยู่แล้ว
+                จึงรู้สึกว่าสถานที่แห่งนี้เป็นหนึ่งในเป้าหมายที่อยากไปให้ถึง
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- การศึกษา -->
+
+    <h2 class="section-title">
+        ประวัติการศึกษา 📚
+    </h2>
+
+    <div class="timeline">
+
+
+        <div class="edu">
+
+            <div class="edu-dot">
+                🏫
+            </div>
+
+            <div class="edu-card">
+
+                <h3>
+                    ระดับประถมศึกษา
+                </h3>
+
+                <p>
+                    โรงเรียนกุญแจคริสเตียนวิทยา
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="edu">
+
+            <div class="edu-dot">
+                📖
+            </div>
+
+            <div class="edu-card">
+
+                <h3>
+                    ระดับมัธยมศึกษาตอนต้น
+                </h3>
+
+                <p>
+                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์<br>
+                    สายการเรียนการงานอาชีพ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="edu">
+
+            <div class="edu-dot">
+                🎓
+            </div>
+
+            <div class="edu-card">
+
+                <h3>
+                    ระดับมัธยมศึกษาตอนปลาย
+                </h3>
+
+                <p>
+                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์<br>
+                    สายการเรียนเตรียมมนุษยศาสตร์ ภาษาจีน
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </main>
 
-<footer>♡ Made with love by Pornchanok ♡</footer>
+
+<footer>
+    ♡ Made with love by Pornchanok ♡
+</footer>
+
 
 </body>
 </html>
