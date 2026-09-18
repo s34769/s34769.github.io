@@ -7,54 +7,183 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
 font-family:Arial,sans-serif;
 background:linear-gradient(135deg,#fffaff,#f1e5ff);
-color:#554466;min-height:100vh
+color:#554466;
+min-height:100vh
 }
+
 header{
-background:white;padding:20px 7%;
-display:flex;justify-content:space-between;align-items:center;
+background:white;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 box-shadow:0 3px 15px #d8c5e555;
-position:sticky;top:0;z-index:10
+position:sticky;
+top:0;
+z-index:10
 }
-.logo{font-size:25px;font-weight:bold;color:#9165bd}
-nav a{text-decoration:none;color:#665572;padding:10px 15px;border-radius:25px;display:inline-block}
-nav a:hover,nav .active{background:#eadcff;color:#8053aa}
-.page{max-width:1050px;margin:auto;padding:65px 25px}
-.title{text-align:center;color:#9368bd;font-size:42px;margin-bottom:45px}
+
+.logo{
+font-size:25px;
+font-weight:bold;
+color:#9165bd
+}
+
+nav a{
+text-decoration:none;
+color:#665572;
+padding:10px 15px;
+border-radius:25px;
+display:inline-block
+}
+
+nav a:hover,
+nav .active{
+background:#eadcff;
+color:#8053aa
+}
+
+.page{
+max-width:1050px;
+margin:auto;
+padding:65px 25px
+}
+
+.title{
+text-align:center;
+color:#9368bd;
+font-size:42px;
+margin-bottom:45px
+}
+
 .grid{
-display:grid;grid-template-columns:1fr 1fr;gap:25px
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px
 }
+
 .card{
-background:white;border:2px solid #eadcf8;
-border-radius:28px;padding:32px;min-height:230px;
+background:white;
+border:2px solid #eadcf8;
+border-radius:28px;
+padding:32px;
+min-height:230px;
 box-shadow:0 10px 25px #9e78bd22;
 transition:.3s
 }
-.card:hover{transform:translateY(-7px)}
-.icon{
-width:65px;height:65px;border-radius:20px;
-background:#f0e2fb;display:flex;align-items:center;
-justify-content:center;font-size:32px;margin-bottom:18px
+
+.card:hover{
+transform:translateY(-7px)
 }
-.card h2{color:#8d60b7;margin-bottom:12px}
-.card p{color:#76697e;line-height:1.8;margin-bottom:15px}
+
+.card h2{
+color:#8d60b7;
+margin-bottom:12px
+}
+
+.card p{
+color:#76697e;
+line-height:1.8;
+margin-bottom:15px
+}
+
 .tag{
-display:inline-block;background:#f1e5fa;
-color:#9a70bd;padding:6px 12px;
-border-radius:20px;font-size:13px
+display:inline-block;
+background:#f1e5fa;
+color:#9a70bd;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px
 }
-.number{float:right;color:#c2a2da;font-size:23px}
-footer{text-align:center;padding:25px;color:#a28cad}
-.f{position:fixed;font-size:30px;opacity:.4;animation:float 4s infinite}
-.f1{left:5%;top:25%}.f2{right:7%;top:20%}
-.f3{left:10%;bottom:15%}.f4{right:8%;bottom:20%}
-@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+
+.number{
+float:right;
+color:#c2a2da;
+font-size:23px
+}
+
+/* หมายเหตุ */
+.note{
+margin:45px auto 10px;
+max-width:800px;
+background:#ffffffcc;
+border:2px solid #eadcff;
+border-radius:25px;
+padding:25px 30px;
+text-align:center;
+box-shadow:0 8px 25px #9e78bd18
+}
+
+.note h3{
+color:#8053aa;
+margin-bottom:10px;
+font-size:20px
+}
+
+.note p{
+color:#76697e;
+line-height:1.8;
+font-size:14px
+}
+
+.note strong{
+color:#8053aa
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#a28cad
+}
+
+.f{
+position:fixed;
+font-size:30px;
+opacity:.4;
+animation:float 4s infinite;
+pointer-events:none
+}
+
+.f1{left:5%;top:25%}
+.f2{right:7%;top:20%}
+.f3{left:10%;bottom:15%}
+.f4{right:8%;bottom:20%}
+
+@keyframes float{
+50%{
+transform:translateY(-18px) rotate(8deg)
+}
+}
+
 @media(max-width:700px){
-header{flex-direction:column;gap:12px}
-nav{display:flex;flex-wrap:wrap;justify-content:center}
-.grid{grid-template-columns:1fr}
+
+header{
+flex-direction:column;
+gap:12px
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center
+}
+
+.grid{
+grid-template-columns:1fr
+}
+
+.title{
+font-size:34px
+}
+
+.note{
+padding:22px 20px
+}
+
 }
 </style>
 </head>
@@ -67,31 +196,40 @@ nav{display:flex;flex-wrap:wrap;justify-content:center}
 <div class="f f4">🦋</div>
 
 <header>
-<div class="logo">PAN PORTFOLIO ♡</div>
-<nav>
+
+<div class="logo">
+PAN PORTFOLIO ♡
+</div>
+
 <nav>
     <a href="index.html">หน้าหลัก</a>
     <a href="profile.html">ประวัติส่วนตัว</a>
-    <a href="activities.html">กิจกรรม</a>
+    <a href="activities.html" class="active">กิจกรรม</a>
     <a href="contact.html">ติดต่อ</a>
 </nav>
-</nav>
+
 </header>
 
 <main class="page">
 
-<h1 class="title">กิจกรรมที่ทำ ✨</h1>
+<h1 class="title">
+กิจกรรมที่ทำ ✨
+</h1>
 
 <div class="grid">
 
+<!-- กิจกรรม 01 -->
 <div class="card">
+
     <div class="number">01</div>
 
     <img src="IMG_2300.jpeg"
          alt="ทัศนศึกษาที่ปัญญาภิวัฒน์"
          style="width:180px;height:180px;object-fit:cover;border-radius:20px;display:block;margin:15px auto;">
 
-    <h2>ทัศนศึกษาที่ปัญญาภิวัฒน์ 📚</h2>
+    <h2>
+        ทัศศึกษาที่ปัญญาภิวัฒน์ 📚
+    </h2>
 
     <p>
         เข้าร่วมทัศนศึกษาที่ปัญญาภิวัฒน์
@@ -99,18 +237,25 @@ nav{display:flex;flex-wrap:wrap;justify-content:center}
         และได้รับประสบการณ์ใหม่ ๆ จากการเรียนรู้
     </p>
 
-    <span class="tag">ACTIVITY</span>
+    <span class="tag">
+        ACTIVITY
+    </span>
+
 </div>
 
 
+<!-- กิจกรรม 02 -->
 <div class="card">
+
     <div class="number">02</div>
 
     <img src="IMG_2299.jpeg"
          alt="ร้องเพลงในวันตรุษจีน"
          style="width:180px;height:180px;object-fit:cover;border-radius:20px;display:block;margin:15px auto;">
 
-    <h2>ร้องเพลงในวันตรุษจีน 🧧🎤</h2>
+    <h2>
+        ร้องเพลงในวันตรุษจีน 🧧🎤
+    </h2>
 
     <p>
         ร่วมร้องเพลงในกิจกรรมวันตรุษจีน
@@ -118,18 +263,25 @@ nav{display:flex;flex-wrap:wrap;justify-content:center}
         ร่วมกับเพื่อน ๆ ในกิจกรรมของโรงเรียน
     </p>
 
-    <span class="tag">ACTIVITY</span>
+    <span class="tag">
+        ACTIVITY
+    </span>
+
 </div>
 
 
+<!-- กิจกรรม 03 -->
 <div class="card">
+
     <div class="number">03</div>
 
     <img src="IMG_2302.jpeg"
          alt="เปิดบูธถักเชือกในวันเปิดบ้านวิชาการ"
          style="width:180px;height:180px;object-fit:cover;border-radius:20px;display:block;margin:15px auto;">
 
-    <h2>เปิดบูธถักเชือกในวันเปิดบ้านวิชาการ 🧶✨</h2>
+    <h2>
+        เปิดบูธถักเชือกในวันเปิดบ้านวิชาการ 🧶✨
+    </h2>
 
     <p>
         เข้าร่วมเปิดบูธถักเชือกในวันเปิดบ้านวิชาการ
@@ -137,18 +289,25 @@ nav{display:flex;flex-wrap:wrap;justify-content:center}
         พร้อมทั้งได้แบ่งปันความรู้และประสบการณ์ให้กับผู้ที่สนใจ
     </p>
 
-    <span class="tag">ACTIVITY</span>
+    <span class="tag">
+        ACTIVITY
+    </span>
+
 </div>
 
 
+<!-- กิจกรรม 04 -->
 <div class="card">
+
     <div class="number">04</div>
 
     <img src="IMG_2298.jpeg"
          alt="เข้าร่วมติว HSK กับมหาวิทยาลัยธุรกิจบัณฑิตย์"
          style="width:180px;height:180px;object-fit:cover;border-radius:20px;display:block;margin:15px auto;">
 
-    <h2>ติว HSK กับมหาวิทยาลัยธุรกิจบัณฑิตย์ 📚🇨🇳</h2>
+    <h2>
+        ติว HSK กับมหาวิทยาลัยธุรกิจบัณฑิตย์ 📚🇨🇳
+    </h2>
 
     <p>
         เข้าร่วมกิจกรรมติว HSK กับมหาวิทยาลัยธุรกิจบัณฑิตย์
@@ -156,11 +315,37 @@ nav{display:flex;flex-wrap:wrap;justify-content:center}
         รวมถึงได้รับความรู้และประสบการณ์ใหม่ ๆ จากการเข้าร่วมกิจกรรม
     </p>
 
-    <span class="tag">ACTIVITY</span>
+    <span class="tag">
+        ACTIVITY
+    </span>
+
 </div>
+
+</div>
+
+
+<!-- หมายเหตุด้านล่าง -->
+<div class="note">
+
+    <h3>
+        หมายเหตุ ♡
+    </h3>
+
+    <p>
+        ผลงานในพอร์ตเล่มนี้มีจำนวนไม่มาก เนื่องจากไม่ได้เข้ารอบพอร์ตโดยตรง
+        และมีแผนศึกษาต่อในมหาวิทยาลัยเอกชน
+        <strong>มหาวิทยาลัยธุรกิจบัณฑิตย์ (DPU)</strong>
+        อีกทั้งเกียรติบัตรบางส่วนสูญหาย
+        จึงไม่สามารถนำมาแสดงได้ครบทั้งหมด
+    </p>
+
+</div>
+
 </main>
 
-<footer>♡ Made with love by Pornchanok ♡</footer>
+<footer>
+♡ Made with love by Pornchanok ♡
+</footer>
 
 </body>
 </html>
